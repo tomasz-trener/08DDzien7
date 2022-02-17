@@ -73,6 +73,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Web.config" />
     <Content Include="ZawodnicyView.aspx" />
+    <Content Include="ZawodnicyViewStyle.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
