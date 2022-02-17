@@ -177,8 +177,11 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Simple Table</h4>
-              </div>
+                  <form runat="server" >
+                         <asp:Button ID="btnNowy" OnClick="btnNowy_Click" CssClass="btn btn-primary btn-block" runat="server" Text="Nowy" />
+                  </form>
+                              
+              </div>    
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">

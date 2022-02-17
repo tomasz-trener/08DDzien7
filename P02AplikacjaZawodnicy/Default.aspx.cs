@@ -16,5 +16,11 @@ namespace P02AplikacjaZawodnicy
         {
             Zawodnicy = iDostepDoDanych.WygenerujZawodnikow();
         }
+
+ 
+        protected void btnNowy_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SzczegolyView.aspx");
+        }
     }
 }

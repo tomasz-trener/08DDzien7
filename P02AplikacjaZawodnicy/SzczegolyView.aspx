@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
                                     <asp:Button ID="btnZapisz" OnClick="btnZapisz_Click" CssClass="btn btn-primary btn-block" runat="server" Text="Zapisz" />
-                                    <asp:Button ID="btnUsun" CssClass="btn btn-primary btn-block" runat="server" Text="Usuń" />
+                                    <asp:Button ID="btnUsun" OnClick="btnUsun_Click" CssClass="btn btn-primary btn-block" runat="server" Text="Usuń" />
                                 </form>
                             </div>
 

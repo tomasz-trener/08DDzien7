@@ -15,8 +15,8 @@ namespace P02AplikacjaZawodnicy
         protected void Page_Load(object sender, EventArgs e)
         {
             string ids = Request["id"];
-            if (ids == null)
-                Response.Redirect("Default.aspx");
+            if (ids == null) // to znaczy, że jestesmy w trybie tworzenia nowego zawodnika
+                return;
 
             int id = Convert.ToInt32(ids);
             Zawodnik= iDostepDoDanych.PodajZawodnika(id);
@@ -35,16 +35,34 @@ namespace P02AplikacjaZawodnicy
 
         protected void btnZapisz_Click(object sender, EventArgs e)
         {
-            Zawodnik.Imie = txtImie.Text;
-            Zawodnik.Nazwisko = txtNazwisko.Text;
-            Zawodnik.Kraj = txtKraj.Text;
-            Zawodnik.DataUrodzenia = Convert.ToDateTime(txtDataUr.Text);
-            Zawodnik.Waga = Convert.ToInt32(txtWaga.Text);
-            Zawodnik.Wzrost = Convert.ToInt32(txtWzrost.Text);
-
-            iDostepDoDanych.Edytuj(Zawodnik);
+            if(Zawodnik == null) // to znaczy jestesmy w trybie tworzenia
+            {
+                Zawodnik = new Zawodnik();
+                zczytajTextboxy(Zawodnik);
+                iDostepDoDanych.Dodaj(Zawodnik);
+            } 
+            else // jestesmy w trybie edycji 
+            {
+                zczytajTextboxy(Zawodnik);
+                iDostepDoDanych.Edytuj(Zawodnik);
+            }
             Response.Redirect("Default.aspx");
+        }
 
+        private void zczytajTextboxy(Zawodnik z)
+        {
+            z.Imie = txtImie.Text;
+            z.Nazwisko = txtNazwisko.Text;
+            z.Kraj = txtKraj.Text;
+            z.DataUrodzenia = Convert.ToDateTime(txtDataUr.Text);
+            z.Waga = Convert.ToInt32(txtWaga.Text);
+            z.Wzrost = Convert.ToInt32(txtWzrost.Text);
+        }
+
+        protected void btnUsun_Click(object sender, EventArgs e)
+        {
+            iDostepDoDanych.Usun(Zawodnik.Id_zawodnika);
+            Response.Redirect("Default.aspx");
         }
     }
 }
