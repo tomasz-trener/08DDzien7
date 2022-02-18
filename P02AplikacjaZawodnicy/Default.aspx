@@ -186,7 +186,10 @@
               </div>    
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table">
+                    <div id="dvLadowanie" style="text-align:center;display:none">
+                        <img style="width:150px;" id="imgLadowanie" src="images/spinning-loading.gif" />
+                    </div>
+                    <table class="table">
                     <thead class=" text-primary">
                      <tr>
                           <th>

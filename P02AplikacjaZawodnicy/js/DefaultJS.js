@@ -3,7 +3,12 @@
 
 $(document).ready(function () {
 
+
+
     $("#dvLupka").click(function () {
+
+        $("table").hide();
+        $("#dvLadowanie").show();
 
         /* $("#spWynik").html("ala ma kota");*/
 
@@ -28,11 +33,13 @@ $(document).ready(function () {
                         "<td>" + zawodnicy[i].Kraj + "</td>" +
                         "<td>" + zawodnicy[i].Wzrost + "</td>" +
                         "<td>" + zawodnicy[i].Waga + "</td>" +
-                        "<td>" + zawodnicy[i].DataUrodzenia + "</td>" + "</tr>";
-
+                        "<td>" + new Date(parseInt(zawodnicy[i].DataUrodzenia.substring(6))).toLocaleDateString("pl-pl") + "</td>" + "</tr>";
                 }
 
                 $("table tbody").html(napis)
+
+                $("table").show();
+                $("#dvLadowanie").hide();
             });
 
     });

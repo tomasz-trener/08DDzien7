@@ -94,9 +94,13 @@
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultServer.aspx" />
+    <Content Include="images\spinning-loading.gif" />
     <Content Include="js\DefaultJS.js" />
+    <Content Include="js\WykresyJS.js" />
     <Content Include="SzczegolyView.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WykresyServer.aspx" />
+    <Content Include="WykresyView.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
@@ -120,6 +124,20 @@
     </Compile>
     <Compile Include="SzczegolyView.aspx.designer.cs">
       <DependentUpon>SzczegolyView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WykresyServer.aspx.cs">
+      <DependentUpon>WykresyServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WykresyServer.aspx.designer.cs">
+      <DependentUpon>WykresyServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WykresyView.aspx.cs">
+      <DependentUpon>WykresyView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WykresyView.aspx.designer.cs">
+      <DependentUpon>WykresyView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
