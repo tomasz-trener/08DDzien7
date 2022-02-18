@@ -442,7 +442,7 @@ demo = {
       }
     };
 
-    var viewsChart = new Chart(e, a);
+  //  var viewsChart = new Chart(e, a);
   },
 
   initGoogleMaps: function() {

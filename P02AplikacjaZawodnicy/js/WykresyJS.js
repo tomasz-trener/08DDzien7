@@ -2,12 +2,23 @@
     // Javascript method's body can be found in assets/js/demos.js
     demo.initDashboardPageCharts();
 
+    $.ajax({
+        method: "POST",
+        url: "WykresyServer.aspx",
+        //data: { filtr: filtr }
+    })
+        .done(function (msg) {
+            var daneDoWykresu = JSON.parse(msg);
+            stworzWykresSlupkowy(daneDoWykresu);
+        });
+});
 
 
-    ctx = document.getElementById('lineChartExampleWithNumbersAndGrid').getContext("2d");
+function stworzWykresSlupkowy(daneDoWykresu) {
+   // ctx = document.getElementById('lineChartExampleWithNumbersAndGrid').getContext("2d");
     var e = document.getElementById("barChartSimpleGradientsNumbers").getContext("2d");
 
-    gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
+    gradientFill = e.createLinearGradient(0, 170, 0, 50);
     gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
     gradientFill.addColorStop(1, hexToRGB('#2CA8FF', 0.6));
 
@@ -15,9 +26,9 @@
     var a = {
         type: "bar",
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            labels: daneDoWykresu.OsX,
             datasets: [{
-                label: "Active Countries",
+                label: "Wzrost",
                 backgroundColor: gradientFill,
                 borderColor: "#2CA8FF",
                 pointBorderColor: "#FFF",
@@ -28,7 +39,7 @@
                 pointRadius: 4,
                 fill: true,
                 borderWidth: 1,
-                data: [200, 99, 86, 96, 123, 85, 100, 75, 88, 90, 123, 155]
+                data: daneDoWykresu.OsY
             }]
         },
         options: {
@@ -80,5 +91,4 @@
     };
 
     var viewsChart = new Chart(e, a);
-
-});
+}
