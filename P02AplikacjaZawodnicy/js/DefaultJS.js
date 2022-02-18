@@ -50,7 +50,8 @@ function zapytanieNaServer(n) {
             var napis = "";
             for (var i = 0; i < zawodnicy.length; i++) {
                 napis += "<tr>" +
-                    "<td>" + zawodnicy[i].ImieNazwisko + "</td>" +
+                    "<td><a href='SzczegolyView.aspx?id=" + zawodnicy[i].Id_zawodnika + "'>" + zawodnicy[i].ImieNazwisko +"</a></td>"+
+                  /*  "<td>" + zawodnicy[i].ImieNazwisko + "</td>" +*/
                     "<td>" + zawodnicy[i].Kraj + "</td>" +
                     "<td>" + zawodnicy[i].Wzrost + "</td>" +
                     "<td>" + zawodnicy[i].Waga + "</td>" +
