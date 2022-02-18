@@ -14,7 +14,7 @@ namespace P02AplikacjaZawodnicy
         public Zawodnik[] Zawodnicy;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Zawodnicy = iDostepDoDanych.WygenerujZawodnikow();
+            Zawodnicy = iDostepDoDanych.WygenerujZawodnikow(1,5,"");
         }
 
  

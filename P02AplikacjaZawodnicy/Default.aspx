@@ -240,6 +240,14 @@
                     
                     </tbody>
                   </table>
+
+
+                    <div>
+                        <i id="btnLewo" style="cursor:pointer" class="now-ui-icons arrows-1_minimal-left"></i>
+                        <input id="txtStrona" style="width:50px" type="text" value="1" />
+                         <i id="btnPrawo"  style="cursor:pointer"  class="now-ui-icons arrows-1_minimal-right"></i>
+                    </div>
+
                 </div>
               </div>
             </div>
