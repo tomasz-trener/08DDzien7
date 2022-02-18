@@ -48,13 +48,13 @@ function stworzWykresSlupkowy(daneDoWykresu) {
                 display: false
             },
             tooltips: {
-                bodySpacing: 4,
-                mode: "nearest",
-                intersect: 0,
-                position: "nearest",
-                xPadding: 10,
-                yPadding: 10,
-                caretPadding: 10
+               // bodySpacing: 4,
+              //  mode: "nearest",
+              //  intersect: 0,
+                //position: "nearest",
+                //xPadding: 10,
+                //yPadding: 10,
+                //caretPadding: 10
             },
             responsive: 1,
             scales: {

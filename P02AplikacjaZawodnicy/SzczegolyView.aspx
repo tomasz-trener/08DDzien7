@@ -35,6 +35,12 @@
     <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+   <%-- <link rel="stylesheet" href="styles/kendo/styles/web/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo/styles/web/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo/styles/web/kendo.default.mobile.min.css" />--%>
+
+
 </head>
 
 <body class="user-profile">
@@ -320,6 +326,9 @@
     <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
     <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
     <script src="../assets/demo/demo.js"></script>
+
+  <%--  <script src="lib/kendo/kendo.datepicker.js"></script>--%>
+
 </body>
 
 </html>

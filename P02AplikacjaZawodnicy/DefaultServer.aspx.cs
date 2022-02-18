@@ -16,8 +16,20 @@ namespace P02AplikacjaZawodnicy
         {
             string filtr = Request["filtr"];
 
+            string wielkoscStrony = Request["wielkoscStrony"];
+            string numerStrony = Request["numerStrony"];
+         
+
             IDostepDoDanych iDostepDoDanych = new ZawodnicyRepository();
-            Zawodnik[] zawodnicy= iDostepDoDanych.Filtruj(filtr);
+            
+            Zawodnik[] zawodnicy;
+            if (string.IsNullOrEmpty(wielkoscStrony))
+                zawodnicy = iDostepDoDanych.Filtruj(filtr);
+            else
+                zawodnicy = iDostepDoDanych.WygenerujZawodnikow(
+                    Convert.ToInt32(numerStrony),
+                    Convert.ToInt32(wielkoscStrony), 
+                    filtr); ;
 
             Thread.Sleep(5000);
 
