@@ -128,9 +128,9 @@
             <form>
               <div class="input-group no-border">
                
-                  <input type="text" value="" class="form-control" placeholder="Search...">             
+                  <input id="txtFiltr" type="text" value="" class="form-control" placeholder="Search...">             
 
-                  <div class="input-group-append">
+                  <div id="dvLupka" class="input-group-append">
                   <div class="input-group-text">
                     <i class="now-ui-icons ui-1_zoom-bold"></i>
                   </div>
@@ -288,6 +288,7 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  <script src="js/DefaultJS.js"></script>
 </body>
 
 </html>
